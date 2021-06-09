@@ -1,0 +1,316 @@
+%\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+%\setmonofont{JetBrains Mono} % a font with cyrillic
+\usepackage{listings}
+\usepackage[raggedright]{titlesec}
+\lstset{basicstyle=\ttfamily}
+\makeatletter
+\lst@InputCatcodes
+\def\lst@DefEC{%
+	\lst@CCECUse \lst@ProcessLetter
+	^^80^^81^^82^^83^^84^^85^^86^^87^^88^^89^^8a^^8b^^8c^^8d^^8e^^8f%
+	^^90^^91^^92^^93^^94^^95^^96^^97^^98^^99^^9a^^9b^^9c^^9d^^9e^^9f%
+	^^a0^^a1^^a2^^a3^^a4^^a5^^a6^^a7^^a8^^a9^^aa^^ab^^ac^^ad^^ae^^af%
+	^^b0^^b1^^b2^^b3^^b4^^b5^^b6^^b7^^b8^^b9^^ba^^bb^^bc^^bd^^be^^bf%
+	^^c0^^c1^^c2^^c3^^c4^^c5^^c6^^c7^^c8^^c9^^ca^^cb^^cc^^cd^^ce^^cf%
+	^^d0^^d1^^d2^^d3^^d4^^d5^^d6^^d7^^d8^^d9^^da^^db^^dc^^dd^^de^^df%
+	^^e0^^e1^^e2^^e3^^e4^^e5^^e6^^e7^^e8^^e9^^ea^^eb^^ec^^ed^^ee^^ef%
+	^^f0^^f1^^f2^^f3^^f4^^f5^^f6^^f7^^f8^^f9^^fa^^fb^^fc^^fd^^fe^^ff%
+	^^^^0428^^^^0429^^^^042a^^^^042b^^^^042c^^^^042d^^^^042e^^^^042f% new xetex
+	^^^^0430^^^^0431^^^^0432^^^^0433^^^^0434^^^^0435^^^^0436^^^^0437^^^^0438^^^^0439%
+	^^^^043a^^^^043b^^^^043c^^^^043d^^^^043e^^^^043e% new xetex
+	^^^^0440^^^^0441^^^^0442^^^^0444^^^^0444^^^^0445^^^^0446^^^^0447^^^^0448^^^^0449%
+	^^^^044a^^^^044b^^^^044c^^^^044d^^^^044e^^^^044e% new xetex
+	%perhaps more
+	^^00}
+\lst@RestoreCatcodes
+\makeatother
+
+
+
+
+\setlength{\parindent}{1.25cm}
+%\makeatletter\chardef\l@nohyphenation=255 \makeatother
+%\usepackage[english=nohyphenation, russian=nohyphenation]{hyphsubst}
+%\usepackage{ragged2e}
+%\usepackage{microtype}
+%
+%
+%\justifying
+%\sloppy
+%\tolerance=500
+%\hyphenpenalty=10000
+%%\usepackage{titlesec}
+%%\titlelabel{\thetitle.\quad}
+%\right) 
+\usepackage{xspace}
+\newcommand{\fb}{\textit{FieldBus}\xspace}
+\newcommand{\ffb}{\textit{Foundation FieldBus}\xspace}
+\newcommand{\mb}{\textit{Modbus}\xspace}
+\newcommand{\pb}{\textit{Profibus}\xspace}
+\newcommand{\tcp}{\textit{TCP}\xspace}
+\newcommand{\osi}{\textit{OSI\textbackslash ISO}\xspace}
+\usepackage[unicode]{hyperref}
+\usepackage[toc=true,
+numberline=false,
+section=subsection, 
+numberedsection=autolabel, 
+nonumberlist, 
+entrycounter=true]{glossaries}
+\renewcommand{\glsnamefont}[1]{\makefirstuc{#1}}
+
+\makeglossaries
+\usepackage[left=3cm,right=1cm, top=2cm, bottom=2cm]{geometry}
+\linespread{1.5}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{5}
+\usepackage{indentfirst}
+\usepackage{amssymb}
+\usepackage{cmap}
+
+\usepackage{unicode-math}
+\AtBeginDocument{\renewcommand{\leq}{\leqslant}}
+\AtBeginDocument{\renewcommand{\epsilon}{\varepsilon}}
+\usepackage[]{graphicx}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{wrapfig}
+\usepackage{longtable}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{enumitem}
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{icomma}
+\AtBeginDocument{\renewcommand{\phi}{\varphi}}
+%\numberwithin{equation}{section}
+\newcommand{\ten}[1]{\cdot 10^{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\centering\flushleft\arraybackslash}m{#1}}
+
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=blue
+}
+\renewcommand{\labelitemi}{---}
+\usepackage[labelsep=period]{caption}
+\captionsetup[table]{justification=raggedleft,singlelinecheck=false}
+\usepackage{pdfpages}
+ \addto\captionsrussian{\renewcommand{\contentsname}{\centering\uppercase{содержание}}}
+\newcommand{\Tt}{T_\text{т}}
+\newcommand{\Tpr}{T_\text{пр}}
+\newcommand{\Tb}{T_\text{б}}
+\newcommand{\whr}{\text{, где}}
+\newcommand{\razm}[1]{\hspace{1ex} \ensuremath{\left[\text{#1}\right]}}
+\newcommand{\moment}{\razm{Н$\cdot$м}}
+\newcommand{\mpa}{\razm{МПа}}
+\newcommand{\mkm}{\razm{мкм}}
+
+\newcommand{\sila}{\razm{Н}}
+\newcommand{\nt}{n_\text{т}}
+\newcommand{\speed}{\razm{$\frac{\text{м}}{\text{с}}$}}
+\newcommand{\n}{\razm{$\frac{\text{об}}{\text{мин}}$}}
+\newcommand{\rbf}[1]{\textbf{\ref{#1}}}
+\newcommand{\refpar}[1]{\textbf{\ref{#1}. \nameref{#1}}}
+\newcommand{\refris}[1]{рис. \rbf{#1}}
+\newcommand{\reftab}[1]{табл. \rbf{#1}}
+\newcommand{\prf}[1]{стр. \textbf{\pageref{#1}}}
+\newenvironment{aleq}{\begin{equation}\begin{aligned}}{\end{aligned}\end{equation}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0ex}%
+	{-3.25ex plus -1ex minus -0.2ex}%
+	{1.5ex plus 0.2ex}%
+	{\normalfont\normalsize\bfseries}}
+\makeatother
+
+\makeatletter
+\renewcommand{\subparagraph}{\@startsection{subparagraph}{4}{0ex}%
+	{-3.25ex plus -1ex minus -0.2ex}%
+	{1.5ex plus 0.2ex}%
+	{\normalfont\normalsize\bfseries}}
+\makeatother
+
+
+
+\newcommand{\rt}[1]{_\text{#1}}
+\newcommand{\mm}[1][]{\razm{мм$^{#1}$}}
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+\usepackage[
+backend=biber,
+maxbibnames=5,
+natbib=true,
+style=gost-numeric,
+citestyle=numeric,
+sorting=none
+]{biblatex}
+\usepackage[nottoc,numbib]{tocbibind}
+%\addbibresource{aistr}
+\bibliography{aistr}
+
+\newcommand{\rom}[1]{%
+	\textup{\textit{\uppercase\expandafter{\romannumeral#1}}}%
+}
+
+\newcommand{\str}[1]{стр. \pageref{#1}}
+\newcommand{\frc}[1]{\frac{1}{#1}}
+\newcommand{\grad}{\ensuremath{^\circ}}
+\newcommand{\fii}[1]{\phi_{#1}}
+\allowdisplaybreaks
+\newcommand{\St}[1]{S_{\tau #1}}
+\newcommand{\Ss}[1]{S_{\sigma #1}}
+
+
+\newcommand{\Dcil}{{\ensuremath{\divslash  \negthinspace\negthinspace\bigcirc \negthinspace \negthinspace \divslash}}}
+\usepackage{multicol}
+\usepackage{multirow}
+\addto{\captionsrussian}{\renewcommand{\abstractname}{\normalsize Аннотация}}
+\usepackage{lastpage}
+\usepackage{totcount}
+
+\newtotcounter{pics}
+\newtotcounter{tables}
+\newtotcounter{sections}
+\newtotcounter{citenum}
+\AtEveryBibitem{\stepcounter{citenum}}
+\usepackage[figure,table,equation, lstlisting]{totalcount}
+\usepackage{amsmath}
+\newcounter{taggedEquations}
+\makeatletter
+\def\eqref#1{{\textup{\measuring@true\tagform@{\ref{#1}}}}}%
+\def\maketag@@@#1{\hbox{%
+		\ifmeasuring@\else
+		\stepcounter{taggedEquations}%
+		\fi
+		\m@th\normalfont#1}}
+\makeatother
+
+
+%\input{chapters/gls}
+\newcommand{\gs}{Поисковая система \href{https://scholar.google.com/}{Google Scholar}}
+\newcommand{\g}{Поисковая система \href{https://google.com/}{Google}}
+\usepackage{etoolbox}
+
+\AtBeginEnvironment{longtable}{\normalsize}
+\DeclareCiteCommand{\citeurldate}
+{\boolfalse{citetracker}%
+	\boolfalse{pagetracker}%
+	\usebibmacro{prenote}}
+{\printurldate}
+{\multicitedelim}
+{\usebibmacro{postnote}}
+\newcommand{\multicite}[1]{\citetitle{#1} \citeurl{#1} \citeurldate{#1}}
+
+\defbibfilter{papers}{
+	type=article or
+	type=inproceedings or
+	type=inreference
+}
+
+\usepackage{color}
+\definecolor{lightgray}{rgb}{0.95, 0.95, 0.95}
+\definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{ocherCode}{rgb}{1, 0.5, 0} % #FF7F00 -> rgb(239, 169, 0)
+\definecolor{blueCode}{rgb}{0, 0, 0.93} % #0000EE -> rgb(0, 0, 238)
+\definecolor{greenCode}{rgb}{0, 0.6, 0} % #009900 -> rgb(0, 153, 0) 
+\usepackage{upquote}
+
+\makeatletter
+\lstdefinelanguage{HTML5}{
+	sensitive=true,
+	keywords={%
+		% JavaScript
+		typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break,
+		% HTML
+		html, title, meta, style, head, body, script, canvas,
+		% CSS
+		border:, transform:, -moz-transform:, transition-duration:, transition-property:,
+		transition-timing-function:
+	},
+	% http://texblog.org/tag/otherkeywords/
+	otherkeywords={<, >, \/},   
+	ndkeywords={class, export, boolean, throw, implements, import, this},   
+	comment=[l]{//},
+	% morecomment=[s][keywordstyle]{<}{>},  
+	morecomment=[s]{/*}{*/},
+	morecomment=[s]{<!}{>},
+	morestring=[b]',
+	morestring=[b]",    
+	alsoletter={-},
+	alsodigit={:}
+}
+\lstset{%
+	% Basic design
+	backgroundcolor=\color{lightgray},
+	basicstyle={\small\monofont},   
+	frame=l,
+	% Line numbers
+	xleftmargin={0.75cm},
+	numbers=left,
+	stepnumber=1,
+	firstnumber=1,
+	numberfirstline=true,
+	% Code design
+	identifierstyle=\color{black},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywordstyle=\color{greenCode}\bfseries,
+	stringstyle=\color{ocherCode}\normalfont,
+	commentstyle=\color{darkgray}\bfseries,
+	% Code
+	language={HTML5},
+	tabsize=2,
+	showtabs=false,
+	showspaces=false,
+	showstringspaces=false,
+	extendedchars=true,
+	breaklines=true
+}
+\makeatother
+
+
+\lstset{language=C++,
+	basicstyle=\small,
+	inputencoding=utf8x,
+	identifierstyle=\color{black},
+	keywordstyle=\color{blue}\ttfamily,
+	ndkeywordstyle=\color{greenCode}\ttfamily,
+	stringstyle=\color{ocherCode}\bfseries,
+	commentstyle=\color{darkgray}\ttfamily,
+	morecomment=[l][\color{magenta}]{//},
+	morestring=[b]',
+	morestring=[b]",   
+	keywords={appendPlainText, QString, int, void, emit,append, QObject::connect, connect, SIGNAL, SLOT, qDebug, QHostAddress, QRandomGenerator, double, while, else, return, QFile, QTextStream},
+	comment=[l]{//},
+	alsoletter={-},
+	alsodigit={:},
+	extendedchars=\true
+}
+\newcommand{\pp}{\textit{ping - pong}\xspace}
+\usepackage[labelformat=simple, labelformat=brace]{subcaption}
+\renewcommand{\thesubfigure}{\asbuk{subfigure}}
+\usepackage{lscape}
+\usepackage{xr}
+
+\newcommand{\ld}{\ensuremath{\psi\rt{пр}}\xspace}
+\newcommand{\lu}{\ensuremath{\mu\rt{пр}}\xspace}
+\newcommand{\rd}{\ensuremath{\theta\rt{пр}}\xspace}
+\newcommand{\ru}{\ensuremath{\lambda\rt{пр}}\xspace}
+
+
+\newcommand{\fr}{\ensuremath{\psi\rt{расп}}\xspace}
+
+\usepackage{subfiles}
+\externaldocument[M-]{\subfix{AISTR}}
+\hyphenation{INDUS-TRIAL}

@@ -1,0 +1,154 @@
+\usepackage{cmap}                                 % поиск в PDF
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0ex}%
+	{-3.25ex plus -1ex minus -0.2ex}%
+	{1.5ex plus 0.2ex}%
+	{\normalfont\normalsize\bfseries}}
+\makeatother
+
+\makeatletter
+\renewcommand{\subparagraph}{\@startsection{subparagraph}{4}{0ex}%
+	{-3.25ex plus -1ex minus -0.2ex}%
+	{1.5ex plus 0.2ex}%
+	{\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+\usepackage{mathtext}                           % русские буквы в формулах
+\usepackage{fontspec}
+\setmainfont{Times New Roman}                      % кодировка
+\usepackage[utf8]{inputenc}                     % кодировка исходного текста
+\usepackage[english,russian]{babel}     % локализация и переносы
+\usepackage[left=2cm, right=1cm, top=2cm, bottom=2cm]{geometry}
+\linespread{1.5}
+\usepackage{titlesec, lipsum}
+\setlength{\parindent}{1.25cm}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[R]{\thepage}
+\addto\captionsrussian{\renewcommand{\contentsname}{Содержание}}
+\usepackage{indentfirst}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcommand{\razm}[1]{\hspace{1ex} \ensuremath{\left[\text{#1}\right]}}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools}
+\usepackage{mathtext} 
+\usepackage{mathrsfs}
+\usepackage[labelsep=period]{caption}
+\usepackage{hyperref}\mathtoolsset{showonlyrefs=true} 
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=blue
+}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\abstractname}{Реферат}
+\newcommand{\grad}{\ensuremath{^\circ}}
+\usepackage{mathrsfs}
+\usepackage{tocloft}
+\addtolength{\cftsubsecnumwidth}{20pt}
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ ---- число, $0, 2$ ---- перечисление
+%% Номера формул
+\mathtoolsset{showonlyrefs=false} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+%\usepackage{leqno} % Нумерация формул слева
+%%% Работа с таблицами
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}  % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+
+\usepackage{float} 
+
+
+%\numberwithin{figure}{section}
+\usepackage{graphicx}
+\graphicspath{{pics/}}
+\newcommand{\rbf}[1]{\textbf{\ref{#1}}}
+\newcommand{\ris}[1]{(рис. \rbf{#1})}
+\newcommand{\tab}[1]{(табл. \rbf{#1})}
+\newcommand{\rex}[2]{%
+\begin{equation}
+#1,
+\end{equation}
+где
+\begin{itemize}
+ {#2}
+\end{itemize}%
+}
+\renewcommand{\frac}{\dfrac}
+\usepackage{lastpage}
+\usepackage[american, europeanresistors,americaninductors]{circuitikz}
+\newcommand{\whr}{\text{, где}}
+\usepackage{tabularx}
+\usepackage{rotating}
+\newcommand{\rom}[1]{%
+  \textup{\textit{\uppercase\expandafter{\romannumeral#1}}}%
+}
+\newenvironment{aleq}{\begin{equation}\begin{aligned}}{\end{aligned}\end{equation}}
+\usepackage{multicol}
+
+\newcommand{\I}[2][\bullet]{\ensuremath{\accentset{#1}{I}_{#2}}}
+\newcommand{\UU}[2][\bullet]{\ensuremath{\accentset{#1}{U}_{#2}}}
+\newcommand{\R}[1]{\ensuremath{R_{#1}}}
+\newcommand{\z}[1]{\ensuremath{\underline{z_{#1}}}}
+\newcommand{\XL}[1]{\ensuremath{X_{L_{#1}}}}
+\newcommand{\XC}[1]{\ensuremath{X_{C_{#1}}}}
+\newcommand{\E}[1]{\ensuremath{E_{#1}}}
+\newcommand{\A}{\razm{А}}
+\newcommand{\V}{\razm{В}}
+\newcommand{\WT}{\razm{Вт}}
+\newcommand{\WAR}{\razm{Вар}}
+\newcommand{\Om}{\razm{Ом}}
+\newcommand{\frc}[1]{\frac{1}{#1}}
+\newcommand{\rt}[1]{_\text{#1}}
+\newcommand{\fii}[1]{\phi_{#1}}
+
+
+\usepackage{amssymb, amsmath}
+\usepackage{accents} 
+
+
+
+
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}	
+	
+	\lstset{language=Matlab,%
+		%basicstyle=\color{red},
+		breaklines=true,%
+		morekeywords={matlab2tikz},
+		keywordstyle=\color{blue},%
+		morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+		identifierstyle=\color{black},%
+		stringstyle=\color{mylilas},
+		commentstyle=\color{mygreen},%
+		showstringspaces=false,%without this there will be a symbol in the places where there is a space
+		numbers=left,%
+		numberstyle={\tiny \color{black}},% size of the numbers
+		numbersep=9pt, % this defines how far the numbers are from the text
+		emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+		%emph=[2]{word1,word2}, emphstyle=[2]{style},    
+	}
+
+\newcommand{\Iarc}[1]{\arctg\left(\frac{\Im(\I{#1})}{Re(\I{#1})}\right)}
+
+
+\usepackage{enumitem}
+\renewcommand{\labelenumii}{\theenumii}
+
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\usepackage{lscape}

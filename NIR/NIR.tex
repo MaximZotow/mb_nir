@@ -1,0 +1,25 @@
+\documentclass[14pt,a4paper]{extarticle}
+\input{preamble}
+\begin{document}
+	\include{titul}
+	\include{chapters/1. abstract}
+	\tableofcontents
+	\include{chapters/2. introduction}
+	\include{chapters/3. search preparation}
+	\include{chapters/4. poisk}
+	\include{chapters/5. generalization}
+	\include{chapters/6. vivod}
+	\nocite{*}
+	%\printbibliography[heading=bibintoc]
+	\addcontentsline{toc}{section}{\bibname}
+	\printbibheading
+	\printbibliography[filter=papers,heading=subbibliography,title={Научные статьи}]
+	\printbibliography[type=online,heading=subbibliography,
+	title={Онлайн-издания}]
+	\printbibliography[type=incollection,heading=subbibliography,
+	title={Разделы книг}]
+	\printbibliography[type=book, heading=subbibliography,
+	title={Книги}]
+	\printbibliography[type=misc, heading=subbibliography,
+	title={Документация}]
+\end{document}

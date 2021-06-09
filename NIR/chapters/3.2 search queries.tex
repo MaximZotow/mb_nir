@@ -1,0 +1,91 @@
+\subsection{Поисковые запросы}
+\subsubsection{Ключевые слова}
+\textbf{Ключевые слова } -– это слова, отражающие содержание контента, описывают общую тему публикуемых материалов, например, статьи, диссертации, книги, материала сайта или блога.
+
+Для систематизации и упрощения поиска сформулирован перечень ключевых слов, их синонимов и их аналогов на иностранном языке (в основном -- английский). Перечень ключевых слов, используемых в данной работе, приведён в \reftab{tab:keywords}.
+\begin{center}
+	\begin{longtable}{|C{0.3\linewidth}|C{0.3\linewidth}|C{0.3\linewidth}|}
+		\caption{Перечень ключевых слов}
+		\label{tab:keywords}\\
+		\hline
+		\bfseries \centering Ключевое слово&\bfseries Синонимы & \bfseries Ключевые слова на иностранном языке\\
+		\endfirsthead
+		\cpt\\
+		\hline
+		\centering	 Ключевое слово&Синонимы & Ключевые слова на иностранном языке\\
+		\endhead
+		\hline
+		Управление &контроль, регулирование&control, administration\\
+		\hline
+		\Gls{udalenka} &терминальный доступ&remote access\\
+		\hline
+		Автоматизация &компьютеризация, механизация&automation, computerization\\
+		\hline
+		Вакуумная установка &вакуумная система, вакуумное оборудование&vacuum unit,vacuum system, vacuum equipment\\
+		\hline
+		Программное обеспечение &программный продукт, программный пакет &software\\
+		\hline
+		\Gls{connection_protocol}&обмен сообщениями, протокол передачи данных&communication protocol, messaging\\
+		\hline
+		Технологический процесс &технологический цикл, технологическая цепочка&technological process, technological cycle\\
+		\hline
+		Передача данных &обмен информацией, передача показаний&data transfer, information exchange\\
+		\hline
+		\Gls{PLK} &промышленный контролллер, блок управления&programmable logic controller, industrial controller, control block\\
+		\hline
+		Диспетчерское управление & управление и сбор данных, контроль, анализ данных & SCADA, supervisory control\\
+		\hline
+	\end{longtable}
+\end{center}
+
+\subsubsection{Разработка поисковых запросов}
+Сформированные с целью поиска информации поисковые запросы приведены в \reftab{tab:search}
+
+
+\begin{center}
+	\begin{longtable}{|C{0.3\linewidth}|C{0.3\linewidth}|C{0.3\linewidth}|}
+		\caption{Поисковые запросы}
+		\label{tab:search}\\
+		\hline
+		\bfseries  Цель поиска &\bfseries Поисковая конструкция, сложный запрос& \bfseries Дополнительные параметры отбора\\
+		\endfirsthead
+		\cpt\\
+		\hline
+		Цель поиска& Поисковая конструкция, сложный запрос& Дополнительные параметры отбора\\
+		\endhead
+		\hline
+		Найти информацию о способах передачи данных по сети &протоколы + передачи + данных \& интернет&релевантность Google\\
+		\hline
+		Найти информацию о способах удалённого управления техникой&виды + удалённого + доступа | терминальный доступ&релевантность Google\\
+		\hline
+		Найти информацию о протоколе, который лучше всего подходит под задачи автоматизации вакуумной техники & автоматизация + вакуумной + техники | протокол + связи + электронных + устройств | modbus& релевантность Google\\		
+		\hline
+		Найти информацию о протоколах ModBus и Profibus & modbus | profibus | протоколы & релевантность Google\\
+		\hline
+	\end{longtable}
+\end{center}
+
+\subsubsection{Корректировка поисковых запросов}
+После предвариттельного поиска, была проведена корректировка поисковых запросов, представленная в \reftab{tab:search_corrected}
+\begin{center}
+	\begin{longtable}{|C{0.3\linewidth}|C{0.3\linewidth}|C{0.3\linewidth}|}
+		\caption{Уточнённые поисковые запросы}
+		\label{tab:search_corrected}\\
+		\hline
+		\bfseries  Цель поиска &\bfseries Исходный запрос& \bfseries Уточнённый запрос\\
+		\endfirsthead
+		\cpt\\
+		\hline
+		Цель поиска& Исходный запрос & Уточнённый запрос\\
+		\endhead
+		\hline
+		Найти информацию о способах передачи данных по сети &протоколы + передачи + данных \& интернет& протоколы + передачи + данных | communication + protocol\\
+		\hline
+		Найти информацию о способах удалённого управления техникой&виды + удалённого + доступа | терминальный доступ&протоколы + удалённого + доступа | remote + access + protocol\\
+		\hline
+		Найти информацию о протоколе, который лучше всего подходит под задачи автоматизации вакуумной техники & автоматизация + вакуумной + техники | протокол + связи + электронных + устройств | modbus& automation + vacuum + system | modbus + tcp\\		
+		\hline
+		Найти информацию о протоколах ModBus и Profibus & modbus | profibus | протоколы  & (modbus \& profibus) | protocols | comparison | fieldbus\\
+		\hline
+	\end{longtable}
+\end{center}
